@@ -25,5 +25,17 @@ endif
  ROM_NAME := LegendROM-$(ROM_VERSION)-$(ROM_BUILD_TYPE)-$(shell date +%Y%m%d)
 
 
+
  PRODUCT_PROPERTY_OVERRIDES += \
      ro.rom.version=$(ROM_VERSION)
+
+# Backuptool support
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/addon.d/50-simpleaosp.sh:system/addon.d/50-simpleaosp.sh \
+    $(LOCAL_PATH)/bin/backuptool.functions:system/bin/backuptool.functions \
+    $(LOCAL_PATH)/bin/backuptool.sh:system/bin/backuptool.sh
+
+# Bootanimation support
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/media/bootanimation.zip:system/media/bootanimation.zip
+

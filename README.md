@@ -1,2 +1,2 @@
-# vendor_legendrom
+# LegendROM
 LegendROM additions

@@ -9,10 +9,11 @@
     ro.legendrom.device=bacon \
     ro.legendrom.display.version=$(LegendROM_display_version) 
 
- export LegendROM_TARGET_ZIP := LegendROM_bacon-$(LegendROM_version)-$(shell date -u +%Y%m%d)
+ export name := LegendROM_bacon-$(LegendROM_version)-$(shell date -u +%Y%m%d)
 
 #CUSTOM BOOTANIMATION
- PRODUCT_BOOTANIMATION := vendor/legendrom/prebuilt/bootanimation/LegendROM.zip
+     PRODUCT_COPY_FILES += \
+	 vendor/legendrom/prebuilt/bootanimation/LegendROM.zip:system/media/bootanimation.zip
 
 #REQUIRED APPS
  PRODUCT_PACKAGES += \

@@ -1,16 +1,3 @@
- 
- export LegendROM_version := 1.0
- LegendROM_display-version := $(LegendROM_version)
- export ROM_VERSION := $(LegendROM_version)-$(shell date -u +%Y%m%d)
-
- PRODUCT_PROPERTY_OVERRIDES += \
-    ro.modversion=$(ROM_VERSION) \
-    ro.legendrom.version=$(LegendROM_version) \
-    ro.legendrom.device=bacon \
-    ro.legendrom.display.version=$(LegendROM_display_version) 
-
- export name := LegendROM_bacon-$(LegendROM_version)-$(shell date -u +%Y%m%d)
-
 #CUSTOM BOOTANIMATION
      PRODUCT_COPY_FILES += \
 	 vendor/legendrom/prebuilt/bootanimation/LegendROM.zip:system/media/bootanimation.zip
@@ -31,3 +18,12 @@
 	vendor/legendrom/prebuilt/common/apps/CAFBrowser/lib/arm/libswev8.so:system/app/CAFBrowser/lib/arm/libswev8.so \
 	vendor/legendrom/prebuilt/common/apps/CAFBrowser/lib/arm/libswewebrefiner.so:system/app/CAFBrowser/lib/arm/libswewebrefiner.so
 
+ifndef ROM_BUILD_TYPE
+    ROM_BUILD_TYPE := OFFICIAL
+endif
+ ROM_VERSION := 1.0
+ ROM_NAME := LegendROM-$(ROM_VERSION)-$(ROM_BUILD_TYPE)-$(shell date +%Y%m%d)
+
+
+ PRODUCT_PROPERTY_OVERRIDES += \
+     ro.rom.version=$(ROM_VERSION)

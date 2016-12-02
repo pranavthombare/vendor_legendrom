@@ -9,14 +9,14 @@
 
 #LEGENDROM SPECIAL
  PRODUCT_COPY_FILES += \
-	vendor/legendrom/prebuilt/common/apps/CAFBrowser/CAFBrowser.apk:system/app/CAFBrowser/base.apk \
-	vendor/legendrom/prebuilt/common/apps/CAFBrowser/lib/arm/libc++_shared.so:system/app/CAFBrowser/lib/arm/libc++_shared.so \
-	vendor/legendrom/prebuilt/common/apps/CAFBrowser/lib/arm/libicui18n.cr.so:system/app/CAFBrowser/lib/arm/libicui18n.cr.so \
-	vendor/legendrom/prebuilt/common/apps/CAFBrowser/lib/arm/libicuuc.cr.so:system/app/CAFBrowser/lib/arm/libicuuc.cr.so \
-	vendor/legendrom/prebuilt/common/apps/CAFBrowser/lib/arm/libswe.so:system/app/CAFBrowser/lib/arm/libswe.so \
-	vendor/legendrom/prebuilt/common/apps/CAFBrowser/lib/arm/libswecore.so:system/app/CAFBrowser/lib/arm/libswecore.so \
-	vendor/legendrom/prebuilt/common/apps/CAFBrowser/lib/arm/libswev8.so:system/app/CAFBrowser/lib/arm/libswev8.so \
-	vendor/legendrom/prebuilt/common/apps/CAFBrowser/lib/arm/libswewebrefiner.so:system/app/CAFBrowser/lib/arm/libswewebrefiner.so
+	vendor/legendrom/prebuilt/apps/CAFBrowser/CAFBrowser.apk:system/app/CAFBrowser/CAFBrowser.apk \
+	vendor/legendrom/prebuilt/apps/CAFBrowser/lib/arm/libc++_shared.so:system/app/CAFBrowser/lib/arm/libc++_shared.so \
+	vendor/legendrom/prebuilt/apps/CAFBrowser/lib/arm/libicui18n.cr.so:system/app/CAFBrowser/lib/arm/libicui18n.cr.so \
+	vendor/legendrom/prebuilt/apps/CAFBrowser/lib/arm/libicuuc.cr.so:system/app/CAFBrowser/lib/arm/libicuuc.cr.so \
+	vendor/legendrom/prebuilt/apps/CAFBrowser/lib/arm/libswe.so:system/app/CAFBrowser/lib/arm/libswe.so \
+	vendor/legendrom/prebuilt/apps/CAFBrowser/lib/arm/libswecore.so:system/app/CAFBrowser/lib/arm/libswecore.so \
+	vendor/legendrom/prebuilt/apps/CAFBrowser/lib/arm/libswev8.so:system/app/CAFBrowser/lib/arm/libswev8.so \
+	vendor/legendrom/prebuilt/apps/CAFBrowser/lib/arm/libswewebrefiner.so:system/app/CAFBrowser/lib/arm/libswewebrefiner.so
 
 ifndef ROM_BUILD_TYPE
     ROM_BUILD_TYPE := OFFICIAL

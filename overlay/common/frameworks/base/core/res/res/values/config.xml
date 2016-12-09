@@ -18,5 +18,9 @@
 
     <!-- set default messaging app to googles messenger -->
     <string name="default_sms_application">com.google.android.apps.messaging</string>
-
+    
+    <!-- Control whether Night display is available. This should only be enabled on devices
+         with HWC 2.0 or higher. -->
+    <bool name="config_nightDisplayAvailable">true</bool>
 </resources>
+

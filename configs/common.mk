@@ -21,7 +21,7 @@
 ifndef ROM_BUILD_TYPE
     ROM_BUILD_TYPE := OFFICIAL
 endif
- ROM_VERSION := 1.0
+ ROM_VERSION := 2.0
  ROM_NAME := LegendROM-$(ROM_VERSION)-$(ROM_BUILD_TYPE)-$(shell date +%Y%m%d)
 
 

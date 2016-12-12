@@ -29,10 +29,15 @@ endif
  PRODUCT_PROPERTY_OVERRIDES += \
      ro.rom.version=$(ROM_VERSION)
 
+#Backup Gapps
 PRODUCT_COPY_FILES += \
     vendor/legendrom/prebuilt/bin/backuptool.sh:install/bin/backuptool.sh \
     vendor/legendrom/prebuilt/bin/backuptool.functions:install/bin/backuptool.functions \
     vendor/legendrom/prebuilt/bin/50-base.sh:system/addon.d/50-base.sh \
+
+#Swype Functionality
+PRODUCT_COPY_FILES += \
+    vendor/pure/prebuilt/lib/libjni_latinime.so:system/lib/libjni_latinime.so
 
 # Bootanimation support
 PRODUCT_COPY_FILES += \

@@ -37,7 +37,7 @@ PRODUCT_COPY_FILES += \
 
 #Swype Functionality
 PRODUCT_COPY_FILES += \
-    vendor/pure/prebuilt/lib/libjni_latinime.so:system/lib/libjni_latinime.so
+    vendor/legendrom/prebuilt/lib/libjni_latinime.so:system/lib/libjni_latinime.so
 
 # Bootanimation support
 PRODUCT_COPY_FILES += \

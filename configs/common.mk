@@ -5,7 +5,8 @@
 #REQUIRED APPS
  PRODUCT_PACKAGES += \
 	Launcher3\
-	masquerade
+	masquerade\
+	Snap\
 
 #LEGENDROM SPECIAL
  PRODUCT_COPY_FILES += \
@@ -18,22 +19,30 @@
 	vendor/legendrom/prebuilt/apps/CAFBrowser/lib/arm/libswev8.so:system/app/CAFBrowser/lib/arm/libswev8.so \
 	vendor/legendrom/prebuilt/apps/CAFBrowser/lib/arm/libswewebrefiner.so:system/app/CAFBrowser/lib/arm/libswewebrefiner.so
 
-ifndef ROM_BUILD_TYPE
-    ROM_BUILD_TYPE := OFFICIAL
-endif
+
+ ROM_BUILD_TYPE := OFFICIAL
  ROM_VERSION := 2.0
  ROM_NAME := LegendROM-$(ROM_VERSION)-$(ROM_BUILD_TYPE)-$(shell date +%Y%m%d)
 
+# init.d support
+PRODUCT_COPY_FILES += \
+    vendor/legendrom/prebuilt/bin/sysinit:system/bin/sysinit \
+    vendor/legendrom/prebuilt/etc/init.d/00banner:system/etc/init.d/00banner \
+    vendor/legendrom/prebuilt/etc/init.d/90userinit:system/etc/init.d/90userinit
 
+# Init file
+PRODUCT_COPY_FILES += \
+    vendor/legendrom/prebuilt/etc/init.local.rc:root/init.local.rc
 
- PRODUCT_PROPERTY_OVERRIDES += \
-     ro.rom.version=$(ROM_VERSION)
+PRODUCT_PROPERTY_OVERRIDES += \
+     ro.rom.version=$(ROM_VERSION) \
+     ro.opa.eligible_device=true
 
 #Backup Gapps
 PRODUCT_COPY_FILES += \
     vendor/legendrom/prebuilt/bin/backuptool.sh:install/bin/backuptool.sh \
     vendor/legendrom/prebuilt/bin/backuptool.functions:install/bin/backuptool.functions \
-    vendor/legendrom/prebuilt/bin/50-base.sh:system/addon.d/50-base.sh \
+    vendor/legendrom/prebuilt/bin/50-base.sh:system/addon.d/50-base.sh 
 
 #Swype Functionality
 PRODUCT_COPY_FILES += \

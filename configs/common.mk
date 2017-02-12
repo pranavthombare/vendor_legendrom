@@ -21,7 +21,7 @@
 
 
  ROM_BUILD_TYPE := OFFICIAL
- ROM_VERSION := 2.0
+ ROM_VERSION := 3.0
  ROM_NAME := LegendROM-$(ROM_VERSION)-$(ROM_BUILD_TYPE)-$(shell date +%Y%m%d)
 
 # init.d support
@@ -35,7 +35,7 @@ PRODUCT_COPY_FILES += \
     vendor/legendrom/prebuilt/etc/init.local.rc:root/init.local.rc
 
 PRODUCT_PROPERTY_OVERRIDES += \
-     ro.rom.version=$(ROM_VERSION) \
+     ro.legendrom.version=$(ROM_VERSION) \
      ro.opa.eligible_device=true
 
 #Backup Gapps

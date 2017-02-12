@@ -24,6 +24,12 @@
  ROM_VERSION := 3.0
  ROM_NAME := LegendROM-$(ROM_VERSION)-$(ROM_BUILD_TYPE)-$(shell date +%Y%m%d)
 
+# Google Keyboard 
+PRODUCT_COPY_FILES += \
+    vendor/legendrom/prebuilt/apps/GBoard/com.google.android.inputmethod.latin-1/base.apk:system/app/com.google.android.inputmethod.latin-1/base.apk \
+    vendor/legendrom/prebuilt/apps/oard/GBoard/com.google.android.inputmethod.latin-1/oat/arm/base.odex:system/app/com.google.android.inputmethod.latin-1/oat/arm/base.odex \
+    vendor/legendrom/prebuilt/apps/GBcom.google.android.inputmethod.latin-1/lib/arm/libjni_delight4decoder.so:system/app/com.google.android.inputmethod.latin-1/lib/arm/libjni_delight4decoder.so
+
 # init.d support
 PRODUCT_COPY_FILES += \
     vendor/legendrom/prebuilt/bin/sysinit:system/bin/sysinit \

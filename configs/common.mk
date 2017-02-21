@@ -45,7 +45,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
      ro.opa.eligible_device=true
 
 # include definitions for SDCLANG
-include device/qcom/common/sdclang/sdclang.mk
+include vendor/legendrom/sdclang/sdclang.mk
 
 #Backup Gapps
 PRODUCT_COPY_FILES += \

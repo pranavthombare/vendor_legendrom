@@ -27,7 +27,6 @@
 # Google Keyboard 
 PRODUCT_COPY_FILES += \
     vendor/legendrom/prebuilt/apps/GBoard/base.apk:system/app/base.apk \
-    vendor/legendrom/prebuilt/apps/GBoard/base.odex:system/app/oat/arm/base.odex \
     vendor/legendrom/prebuilt/apps/GBoard/libjni_delight4decoder.so:system/app/lib/arm/libjni_delight4decoder.so
 
 # init.d support

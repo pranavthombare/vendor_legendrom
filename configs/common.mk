@@ -29,6 +29,9 @@ PRODUCT_COPY_FILES += \
     vendor/legendrom/prebuilt/apps/GBoard/base.apk:system/app/base.apk \
     vendor/legendrom/prebuilt/apps/GBoard/libjni_delight4decoder.so:system/app/lib/arm/libjni_delight4decoder.so
 
+#Pull in Prebuilt applications for phones
+$(call inherit-product-if-exists, vendor/prebuilt/prebuilt.mk)
+
 # init.d support
 PRODUCT_COPY_FILES += \
     vendor/legendrom/prebuilt/bin/sysinit:system/bin/sysinit \

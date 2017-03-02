@@ -49,6 +49,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # include definitions for SDCLANG
 include vendor/legendrom/sdclang/sdclang.mk
 
+# Include overlays
+PRODUCT_PACKAGE_OVERLAYS += \
+    vendor/legendrom/overlay/common
+
 #Backup Gapps
 PRODUCT_COPY_FILES += \
     vendor/legendrom/prebuilt/bin/backuptool.sh:install/bin/backuptool.sh \

@@ -30,7 +30,7 @@ PRODUCT_COPY_FILES += \
     vendor/legendrom/prebuilt/apps/GBoard/libjni_delight4decoder.so:system/app/lib/arm/libjni_delight4decoder.so
 
 #Pull in Prebuilt applications for phones
-$(call inherit-product-if-exists, vendor/prebuilt/prebuilt.mk)
+include vendor/prebuilt/prebuilt.mk
 
 # init.d support
 PRODUCT_COPY_FILES += \
